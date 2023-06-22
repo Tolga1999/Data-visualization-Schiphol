@@ -25,7 +25,7 @@ _Hieronder een foto van de resterende content op de pagina:_
 ![image](https://github.com/Tolga1999/proof-of-concept/assets/112855878/3bd76322-cd59-4a0b-ae00-ee03924e3fa9)
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
-Link naar de website: LINK
+Link naar de website: https://schiphol-dashboard-sprint-12-leertaak.onrender.com
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
