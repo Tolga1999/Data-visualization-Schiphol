@@ -1,0 +1,19 @@
+{
+  "name": "learning-threejs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "dependencies": {
+    "datamaps": "^0.5.9",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "gsap": "^3.12.1",
+    "three": "^0.153.0"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

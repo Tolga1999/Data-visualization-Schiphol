@@ -1,0 +1,335 @@
+/* fonts inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* the scene now serves as a background */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* root colors */
+:root {
+    --background-color-white: white;
+    --text-color-white: white;
+    --background-color-light-blue: #CCDEFE;
+    --text-color-light-blue: #1B60DB;
+    --text-color-light-grey: #5D5E62;
+    --background-color-button-blue: #1B60DB;
+  }
+
+body{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    background-color: #F6F8FA;
+}
+
+/* nav */
+.nav-bar{
+    position: sticky;
+    top: 0;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color-white);
+    z-index: 2;
+    border-right: 2px solid #C5C5C5;
+    height: 100vh;
+}
+
+ul{
+    width: 13em;
+}
+
+ul li{
+    list-style: none;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* selected list */
+ul li.selected{
+    margin-top: 2em;
+    background-color: var(--background-color-light-blue);
+}
+
+.selected a{
+    color: var(--text-color-light-blue);
+}
+
+ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--text-color-light-grey);
+}
+
+.link-svg{
+    padding: 0;
+    margin: 0;
+}
+
+.logo-svg{
+    display: flex;
+    padding: 2em 0;
+    padding-bottom: 1.6em;
+    min-width: 10em;
+    min-height: 3em;
+}
+/* nav end */
+
+.main-content{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #C5C5C5;
+    background-color: var(--background-color-white);
+    padding: 2em 0;
+    width: 100%;
+}
+
+.h1-container h1{
+    font-size: 2em;
+    padding-left: 2em
+}
+
+.timeframe-options{
+    padding-right: 4em;
+}
+
+.timeframe-options select{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.75em 0.75em;
+    border: 2px solid #C5C5C5;
+    width: 10em;
+    border-radius: 0.5em;
+}
+
+/* custom arrow down */
+select {
+    appearance: none;
+    background-image: url("/assets/Arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: 2em;
+    background-position: right 5px center;
+    cursor: pointer;
+}
+
+/* main content */
+.main-content-second-part{
+    padding: 0 2em;
+}
+
+.counter-datamap{
+    display: flex;
+    justify-content: space-between;
+    height: 28em;
+}
+
+.counter-containers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 2em;
+}
+
+/* counter gsap styling */
+.counter-container{
+    border: 2px solid #C5C5C5;
+    border-radius: 0.5em;
+    padding: 0 2em;
+    padding-top: 2.5em;
+    margin-top: 2em;
+    background-color: var(--background-color-white);
+    width: 22.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2.5em;
+}
+
+.counter-container p{
+    color: var(--text-color-light-grey);
+    font-size: 1.25em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+
+.counter-container span{
+    font-size: 3.5em;
+    font-weight: 600;
+    color: var(--text-color-light-blue);
+}
+
+.counter-svg{
+    background-color: var(--background-color-light-blue);
+    padding: 1em;
+    height: 2.5em;
+    border-radius: 0.5em;
+}
+
+/* datamaps styling */
+.datamap-container{
+    border: 2px solid #C5C5C5;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-top: 2em;
+    background-color: var(--background-color-white);
+    position: relative;
+}
+
+#map{
+    min-width: 44em;
+    max-width: 50em;
+    height: 23em;
+}
+
+.europe-button{
+    background-color: var(--background-color-button-blue);
+    border: none;
+    padding: 0.25em 0.5em;
+    color: var(--text-color-white);
+    bottom: 6em;
+    right: 2em;
+    position: absolute;
+    cursor: pointer;
+}
+.reset-button{
+    background-color: var(--background-color-button-blue);
+    border: none;
+    padding: 0.25em 0.5em;
+    color: var(--text-color-white);
+    bottom: 2em;
+    right: 2em;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+
+/* search form */
+.search-form{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+    border: 2px solid #C5C5C5;
+    border-radius: 0.5em;
+    padding: 1.5em 2em;
+    background-color: var(--background-color-white);
+}
+
+.search-form label{
+    font-size: 1.2em;
+    margin-right: 0.75em
+}
+
+.search-text-input{
+    font-size: 1em;
+    padding: 0.5em 0.75em;
+    border: 2px solid #C5C5C5;
+}
+
+.search-form .search-button-input{
+    background-color: var(--background-color-button-blue);
+    color: var(--text-color-white);
+    border: none;
+    padding: 0.6em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* table */
+.table-content{
+    border: 2px solid #C5C5C5;
+    border-bottom: none;
+    background-color: var(--background-color-white);
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+    /* overflow-x: auto; */
+}
+
+.table-content h2{
+    padding: 1em;
+}
+
+table{
+    border-spacing: 0;
+}
+
+tr th{
+    background-color: var(--background-color-light-blue);
+    color: var(--text-color-light-blue);
+    text-align: left;
+}
+
+.select-all-button{
+    background-color: var(--background-color-white);
+    width: 2em;
+    height: 2em;
+    border: 2px solid #C5C5C5;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+/* for js checkbox */
+.hover{
+    background-color: #C5C5C5;
+}
+
+
+/* js classes */
+.checked{
+    background-color: var(--background-color-button-blue);
+    border: 2px solid var(--background-color-button-blue);
+}
+
+/* add checkmark class */
+.select-all-button-fill{
+    margin: 4px auto;
+    width: 8px;
+    height: 15px;
+    border: solid var(--text-color-white);
+    border-width: 0 5px 5px 0;
+    transform: rotate(45deg);
+}
+
+th,td{
+    padding: 1.5em;
+}
+
+td{
+    font-weight: 600;
+    border-bottom: 2px solid #C5C5C5;
+}
+
+.unknown-landingtime{
+    color: var(--text-color-light-grey);
+}
+
+.container-off{
+    display: none;
+}
