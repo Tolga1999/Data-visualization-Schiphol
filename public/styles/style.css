@@ -140,7 +140,6 @@ select {
 .counter-datamap{
     display: flex;
     justify-content: space-between;
-    height: 28em;
 }
 
 .counter-containers{
@@ -205,6 +204,7 @@ select {
     min-width: 44em;
     max-width: 50em;
     height: 23em;
+    justify-content: center;
 }
 
 .europe-button{
@@ -278,6 +278,7 @@ select {
 
 table{
     border-spacing: 0;
+    width: 100%;
 }
 
 tr th{
@@ -333,3 +334,106 @@ td{
 .container-off{
     display: none;
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1500px) {
+    /* navbar */
+    .nav-bar{
+        display: none;
+    }
+
+    /* counters */
+    .counter-datamap{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .counter-containers{
+        padding: 0;
+        flex-grow: 2;
+        flex-direction: row;
+    }
+
+    .datamap-container{
+        width: 100%;
+    }
+
+    /* table */
+    td, th{
+        padding-left: 0em;
+    }
+
+    td:first-child, th:first-child{
+        padding-left: 1.5em;
+        line-break: auto;
+    }
+
+    td:last-child{
+        line-break: auto;
+    }
+
+}
+
+/* mobile */
+@media screen and (max-width: 930px) {
+    .nav-bar{
+        display: none;
+    }
+
+    /* counters */
+    .counter-datamap{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .counter-containers{
+        padding: 0;
+        flex-grow: 2;
+        flex-direction: column
+    }
+
+    .counter-container{
+        width: auto;
+    }
+
+    .datamap-container{
+        display: none;
+    }
+
+    /* search input */
+    .search-button-input{
+        padding-left: 1em;
+    }
+
+    /* table */
+    th{
+        display: none;
+    }
+
+    /* not shown cause we dont have a map on mobile */
+    td:first-child{
+        display: none;
+    }
+
+    td{
+        display: grid;
+        grid-template-columns: 15ch auto;
+        align-items: center;
+        border-bottom: none;
+        padding: 1.5em;
+    }
+
+    tr:nth-child(2n){
+        background-color: var(--background-color-light-blue);
+    }
+
+    td::before{
+        content: attr(data-cell) ": ";
+        font-weight: 600;
+        color: var(--text-color-light-blue);
+        padding-right: 1em;
+    }
+}
+
+/* MEDIA QUERIES END */

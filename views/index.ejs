@@ -142,7 +142,6 @@
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M5 12l14 0" />
                             </svg></button>
-
                     </div>
             </section>
 
@@ -172,20 +171,20 @@
                     </tr>
                     <% for(var i=0; i< 9; i++){ %>
                     <tr class="flight-data">
-                        <td>
+                        <td data-cell="Select flight">
                             <div class="select-single-button select-all-button">
                                 <div class="checkbox-single-select-content select-all-button-fill"></div>
                         </td>
-                        <td><%= flights[i].flightName %></td>
-                        <td><%= flights[i].prefixICAO %></td>
-                        <td><%= flights[i].flightNumber %></td>
-                        <td><%= flights[i].route.destinations %></td>
-                        <td><%= flights[i].scheduleDateTime %></td>
+                        <td data-cell="Flight name"><%= flights[i].flightName %></td>
+                        <td data-cell="ICAO"><%= flights[i].prefixICAO %></td>
+                        <td data-cell="Flight number"><%= flights[i].flightNumber %></td>
+                        <td data-cell="Destination code"><%= flights[i].route.destinations %></td>
+                        <td data-cell="Schedule time"><%= flights[i].scheduleDateTime %></td>
 
                         <% if(flights[i].estimatedLandingTime === null){ %>
-                        <td class="unknown-landingtime">Landing time unknown</td>
+                        <td class="unknown-landingtime" data-cell="Landing time">Landing time unknown</td>
                         <% }else { %>
-                        <td><%= flights[i].estimatedLandingTime %></td>
+                        <td data-cell="Landing time"><%= flights[i].estimatedLandingTime %></td>
                         <% } %>
                     </tr>
                     <% } %>
